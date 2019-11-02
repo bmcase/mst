@@ -1,5 +1,5 @@
 # mst
-Sollin's/Boruvka’s algorithm for finding minimum weight spanning tree
+We give a Python 3 implementation (uploaded as a Jupyter notebook) of Sollin's/Boruvka’s algorithm for finding the minimum weight spanning tree of a graph.  This was an assignment in MATH 8160 Network Algorithms and Data Structures, Spring 2019 from Prof. Matthew J. Saltzman.   Also included are the assignment statement, a provided Python script that generates instances of mst and some timing analysis. 
 
 There are three main algorithms used for computing minimum weight spanning algorithms. We give a brief description of each, and we implement and analyze Sollin’s algorithm.
 
