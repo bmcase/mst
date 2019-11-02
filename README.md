@@ -11,7 +11,7 @@ There are three main algorithms used for computing minimum weight spanning algor
 
 • Prims: https://www.youtube.com/watch?v=Uj47dxYPow8
 
-• 𝑂𝑂(𝑛𝑛𝑛𝑛log𝑑𝑑𝑛𝑛+𝑚𝑚log𝑑𝑑𝑚𝑚) when using d-heaps
+• O(n d log_d(n) + m log_d(m)) when using d-heaps
 
 ## Kruskal’s:
 
@@ -39,3 +39,36 @@ There are three main algorithms used for computing minimum weight spanning algor
 ## Performance Comparison: 
 
 Kruskl’s generally performs worse than either of the other two. As graphs grow large, Prims performs better on dense graphs than Sollins, and Sollins performs better than Prims on sparse graphs.
+
+## Time and Space Analysis for our Sollin’s implementation
+
+The asymptotic performance of Sollin’s is O(log n) times through the outer loop. Overall then this gives O(m log n) performance. For our implementation of Sollin’s we used a leftist heap, a disjoint set data structure and a hash table.  We have not done a full amortized analysis of these data structures or their effect on our implementation of Sollin’s. We have followed standard implementations of these, so we would expect their performance to match what is necessary to maintain the O(m log n) performance.  
+As for space the algorithm we hold all the edges in heaps and a list of all the vertices, so the space is linear in the graph size, i.e. O(m + n).  We have not had time to do a precise calculation to determine the constants. 
+
+## Empirical Timing Analysis.
+
+Here is the table of the timings we have gathered, where n is the number of vertices and m is the number of edges in the graph. 
+(See pdf)
+
+## References
+
+For our implementation we consulted and followed the following resources.  
+
+•	Leftist heap: 
+
+  o	pseudo code in Tarjan pg 39 (pdf pg 49). 
+
+  o	C++ implementation https://www.geeksforgeeks.org/leftist-tree-leftist-heap/ 
+
+•	Disjoint set: 
+
+  o	pseudo code in Tarjan pg 24 (pdf pg 34).
+  
+  o	Goodrich, Tamassia, Goldwasser’s textbook Data Structures and Algorithms in Python has a Python implementation that we used https://doc.lagout.org/programmation/python/Data%20Structures%20and%20Algorithms%20in%20Python%20[Goodrich,%20Tamassia%20&%20Goldwasser%202013-03-18].pdf
+  
+For timing asymptotics we referred to the survey paper:
+
+Bazlamaçcı, Cüneyt F., and Khalil S. Hindi. "Minimum-weight spanning tree algorithms a survey and empirical study." Computers & Operations Research 28.8 (2001): 767-785.
+
+
+
