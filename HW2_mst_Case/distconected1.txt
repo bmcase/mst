@@ -1,0 +1,11 @@
+c Minimum Spanning Tree
+c
+c nodes:  5 ; arcs:  6; cost range:  0 - 4
+c
+p mst  5 10
+e  0 1 2
+e  0 2 3
+e  2 4 3
+e  0 4 4
+e  1 4 4
+e  1 2 2
